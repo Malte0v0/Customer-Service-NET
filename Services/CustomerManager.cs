@@ -35,9 +35,14 @@ public class CustomerManager {
     return ToResponse(customer);
   }
 
-  public void Delete(long id)
+  public bool Delete(long id)
   {
     int result = _customers.RemoveAll(c => c.Id == id);
+    if (result > 0)
+    {
+      return true;
+    }
+    return false;
   }
 
   public bool EmailExists(string email) {

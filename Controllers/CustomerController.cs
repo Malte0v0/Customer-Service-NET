@@ -36,4 +36,15 @@ public class CustomerController: ControllerBase {
     CustomerResponseDto created = _customerManager.Create(dto);
     return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
   }
+
+  [HttpDelete("{id}")]
+  public IActionResult Delete(long id)
+  {
+    bool delete = _customerManager.Delete(id);
+    if (delete is not true)
+    {
+      return NotFound();
+    }
+    return NoContent();
+  }
 }
