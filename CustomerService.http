@@ -1,6 +1,16 @@
 @CustomerService_HostAddress = http://localhost:5298
 
-GET {{CustomerService_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{CustomerService_HostAddress}}/api/customers
+Content-Type: application/json
+
+{ "firstName": "malte", "lastName": "adwa", "email": "dwdaw@gas.com", "phone": "31231232" }
 
 ###
+
+GET {{CustomerService_HostAddress}}/api/customers
+Content-Type: application/json
+
+###
+
+GET {{CustomerService_HostAddress}}/api/customers/1
+Content-Type: application/json
