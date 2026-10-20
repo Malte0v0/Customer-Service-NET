@@ -3,7 +3,7 @@
 POST {{CustomerService_HostAddress}}/api/customers
 Content-Type: application/json
 
-{ "firstName": "malte", "lastName": "adwa", "email": "dwdaw@gas.com", "phone": "31231232" }
+{ "firstName": "malte", "lastName": "adwa", "email": "dwdaw@gas.com", "phone": "0700000000" }
 
 ###
 
@@ -20,7 +20,7 @@ Content-Type: application/json
 PUT {{CustomerService_HostAddress}}/api/customers/1
 Content-Type: application/json
 
-{ "firstName": "Malte", "lastName": "LastName", "email": "malte.lastname@gmail.com", "phone": "123456789" }
+{ "firstName": "Malte", "lastName": "LastName", "email": "malte.lastname@gmail.com", "phone": "0707506598" }
 
 ###
 

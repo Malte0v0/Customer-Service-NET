@@ -7,7 +7,7 @@ Målet med omskrivningen är att lära mig grunderna i både C# och .NET.
 ## Status
 
 - [x] Controller + service med in-memory lista
-- [ ] PUT + validering
+- [x] PUT + validering
 - [ ] EF Core + MariaDB databas
 - [ ] Egna exceptions + global felhantering
 - [ ] Tester
