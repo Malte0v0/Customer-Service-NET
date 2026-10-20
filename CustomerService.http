@@ -17,5 +17,12 @@ Content-Type: application/json
 
 ###
 
+PUT {{CustomerService_HostAddress}}/api/customers/1
+Content-Type: application/json
+
+{ "firstName": "Malte", "lastName": "LastName", "email": "malte.lastname@gmail.com", "phone": "123456789" }
+
+###
+
 DELETE {{CustomerService_HostAddress}}/api/customers/1
 Content-Type: application/json

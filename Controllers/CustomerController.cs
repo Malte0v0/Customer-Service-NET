@@ -41,10 +41,21 @@ public class CustomerController: ControllerBase {
   public IActionResult Delete(long id)
   {
     bool delete = _customerManager.Delete(id);
-    if (delete is not true)
+    if (!delete)
     {
       return NotFound();
     }
     return NoContent();
+  }
+
+  [HttpPut("{id}")]
+  public ActionResult<CustomerResponseDto> Update(long id, CustomerCreateDto dto)
+  {
+    CustomerResponseDto? response = this._customerManager.Update(id, dto);
+    if (response is null)
+    {
+      return NotFound();
+    }
+    return Ok(response);
   }
 }
