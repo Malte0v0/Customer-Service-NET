@@ -45,6 +45,20 @@ public class CustomerManager {
     return false;
   }
 
+  public CustomerResponseDto? Update(long id, CustomerCreateDto dto)
+  {
+    Customer? customer = this._customers.FirstOrDefault(c => c.Id == id);
+
+    if (customer is null) return null;
+    
+    customer.FirstName = dto.FirstName;
+    customer.LastName = dto.LastName;
+    customer.Email = dto.Email;
+    customer.Phone = dto.Phone;
+
+    return this.ToResponse(customer);
+  }
+
   public bool EmailExists(string email) {
     Customer? customer = this._customers.FirstOrDefault(c => c.Email == email);
     if (customer is not null){
