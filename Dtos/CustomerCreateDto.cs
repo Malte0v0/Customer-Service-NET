@@ -1,3 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace CustomerService.Dtos;
 
-public record CustomerCreateDto(string FirstName, string LastName, string Email, string Phone);
+public record CustomerCreateDto(
+  [Required] string FirstName,
+  [Required] string LastName,
+  [EmailAddress] string Email,
+  [Phone] string Phone
+);
